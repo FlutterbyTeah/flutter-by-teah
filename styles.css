@@ -311,3 +311,133 @@ cite {
     grid-template-columns: 1fr;
   }
 }
+
+/* FLUTTERBYTEAH — BUTTERFLY BRAND DETAILS */
+
+:root {
+  --background: #211f19;
+  --surface: #2b2921;
+  --cream: #f0e7d8;
+  --muted: #c1b5a1;
+  --olive: #77765b;
+  --line: #514939;
+}
+
+/* Softer earthy background */
+body {
+  background-color: var(--background);
+  color: var(--cream);
+}
+
+.announcement {
+  background: #554b3a;
+  color: #f0e7d8;
+}
+
+.site-header {
+  background: #211f19;
+  border-bottom-color: #514939;
+}
+
+.logo {
+  color: #e4d4b9;
+  letter-spacing: -1px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 85% 30%, #514735 0%, transparent 43%),
+    linear-gradient(125deg, #211f19, #343025);
+}
+
+.hero::after {
+  content: "🦋";
+  position: absolute;
+  right: 9%;
+  top: 18%;
+  font-size: clamp(65px, 12vw, 125px);
+  opacity: 0.75;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: #c5b18e;
+}
+
+h1,
+h2,
+h3 {
+  color: #f0e7d8;
+}
+
+.button {
+  border-color: #b9a78a;
+  color: #f0e7d8;
+}
+
+.button:hover {
+  background: #b9a78a;
+  color: #211f19;
+}
+
+.about {
+  background: #2b2921;
+}
+
+.photo-placeholder {
+  background:
+    linear-gradient(145deg, #40392d, #29271f);
+  border: 1px solid #514939;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.photo-placeholder:hover {
+  transform: translateY(-3px);
+  border-color: #b9a78a;
+}
+
+.testimonials {
+  background: #2b2921;
+}
+
+blockquote {
+  border-top-color: #514939;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%, #49402f, transparent 65%);
+}
+
+.contact::after {
+  content: "✧  🦋  ✧";
+  display: block;
+  margin-top: 42px;
+  color: #c5b18e;
+  font-size: 28px;
+  letter-spacing: 9px;
+}
+
+.site-footer {
+  border-top-color: #514939;
+  background: #191813;
+}
+
+@media (max-width: 700px) {
+  .hero::after {
+    right: 6%;
+    top: 8%;
+    font-size: 65px;
+    opacity: 0.55;
+  }
+}
