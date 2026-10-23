@@ -764,3 +764,12 @@ blockquote {
     right: 5%;
   }
 }
+
+/* REMOVE OLD PINK CONTACT BUTTERFLY */
+.contact .butterfly,
+.contact .butterfly-decoration,
+.contact .contact-butterfly,
+.contact .butterfly-icon,
+.contact .butterfly svg {
+  display: none !important;
+}
