@@ -914,3 +914,60 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* WESTERN FENCE + BOTANICAL DETAILS */
+
+.about,
+.portfolio,
+.testimonials,
+.contact {
+  position: relative;
+}
+
+/* Fine barbed-wire divider */
+.checker-strip {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 18px;
+}
+
+.checker-strip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 1px;
+  background: #81765f;
+  opacity: 0.8;
+}
+
+/* Muted olive, vintage Western section accents */
+.about::before,
+.contact::before {
+  content: "✳";
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  color: #77745a;
+  font-size: 24px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.contact::before {
+  content: "❧";
+  top: 20px;
+  right: 6%;
+  font-size: 42px;
+  color: #a99a7b;
+}
+
+/* Keep decorative accents from crowding mobile screens */
+@media (max-width: 600px) {
+  .about::before,
+  .contact::before {
+    opacity: 0.35;
+    font-size: 25px;
+  }
+}
