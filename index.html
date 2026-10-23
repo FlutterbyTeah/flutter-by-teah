@@ -116,3 +116,406 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlutterbyTeah | Real Life, Honestly Captured</title>
+<meta name="description" content="Lifestyle photography by FlutterbyTeah. Real connection, real emotion, real life. Serving Yuba-Sutter and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #28251f;
+  --cream: #f2ede3;
+  --paper: #e6dece;
+  --olive: #74745c;
+  --brown: #5d4636;
+  --line: rgba(40,37,31,.22);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+a { color: inherit; }
+img { max-width: 100%; }
+.top-note {
+  padding: 9px 16px;
+  text-align: center;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid var(--line);
+  gap: 20px;
+}
+.logo {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.logo span { color: var(--olive); font-style: italic; }
+nav { display: flex; gap: 23px; flex-wrap: wrap; }
+nav a {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+}
+nav a:hover { color: var(--olive); }
+.hero {
+  padding: 75px 7% 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--olive);
+  font-weight: 700;
+}
+h1, h2, h3, blockquote {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+h1 {
+  font-size: clamp(56px, 7.5vw, 105px);
+  line-height: .98;
+  letter-spacing: -4px;
+  margin: 24px 0;
+}
+h1 em { color: var(--brown); font-weight: 500; }
+.hero-copy { max-width: 450px; font-size: 14px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.button {
+  display: inline-block;
+  padding: 13px 21px;
+  background: var(--ink);
+  color: var(--cream);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  border: 1px solid var(--ink);
+}
+.button.light { background: transparent; color: var(--ink); }
+.button:hover { background: var(--olive); border-color: var(--olive); color: white; }
+.photo {
+  min-height: 440px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+}
+.photo-label {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  padding: 8px 12px;
+  background: var(--cream);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.photo-note {
+  padding: 24px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--brown);
+}
+.check {
+  height: 13px;
+  background-color: var(--cream);
+  background-image: conic-gradient(var(--ink) 25%, transparent 0 50%, var(--ink) 0 75%, transparent 0);
+  background-size: 26px 26px;
+  opacity: .75;
+}
+.intro {
+  padding: 90px 7%;
+  text-align: center;
+  background: var(--paper);
+}
+.intro h2, .section-heading {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+  margin: 18px 0;
+}
+.intro h2 em { color: var(--brown); }
+.intro p {
+  max-width: 590px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+.section { padding: 85px 7%; }
+.section-top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.section-top p { max-width: 320px; font-size: 12px; }
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.work-card { text-decoration: none; }
+.work-card .photo { min-height: 340px; }
+.work-card:nth-child(2) { margin-top: 35px; }
+.work-card:nth-child(3) { margin-top: 70px; }
+.work-card h3 { font-size: 26px; margin: 15px 0 3px; }
+.work-card p { font-size: 11px; margin-top: 0; color: #71685b; }
+.about {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 90px 7%;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+.about .photo { background: #474538; min-height: 420px; }
+.about .eyebrow { color: #c3b99e; }
+.about h2 { font-size: clamp(43px, 5vw, 66px); line-height: 1.05; margin: 20px 0; }
+.about h2 em { color: #c5b69c; }
+.about p { font-size: 13px; color: #ded5c7; }
+.about .button { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+.value { border-top: 1px solid #777166; padding-top: 12px; font-size: 11px; }
+.value b { display: block; font-size: 10px; color: #c5b69c; letter-spacing: 1px; }
+.testimonials { background: #e3d9c8; }
+.quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.quote {
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+}
+.quote-mark { font-family: 'Playfair Display', serif; font-size: 43px; line-height: 1; color: var(--olive); }
+blockquote { font-size: 21px; line-height: 1.45; margin: 10px 0 20px; }
+.quote cite { font-style: normal; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
+.contact {
+  padding: 95px 7%;
+  text-align: center;
+}
+.contact h2 { font-size: clamp(48px, 7vw, 84px); line-height: 1; margin: 20px 0; }
+.contact h2 em { color: var(--brown); }
+.contact p { max-width: 480px; margin: 20px auto; font-size: 13px; }
+.contact-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 30px; }
+.contact-links a { font-size: 11px; }
+footer {
+  padding: 28px 7%;
+  background: var(--ink);
+  color: var(--cream);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+footer a { color: var(--cream); }
+@media(max-width: 700px) {
+  header { align-items: flex-start; flex-direction: column; padding: 18px 6%; }
+  nav { gap: 13px; }
+  nav a { font-size: 9px; }
+  .hero { grid-template-columns: 1fr; padding: 55px 6% 45px; gap: 30px; }
+  h1 { font-size: 67px; }
+  .hero .photo { min-height: 360px; }
+  .section, .intro, .about, .contact { padding: 65px 6%; }
+  .section-top { display: block; }
+  .work-grid { grid-template-columns: 1fr; gap: 30px; }
+  .work-card:nth-child(2), .work-card:nth-child(3) { margin-top: 0; }
+  .work-card .photo { min-height: 360px; }
+  .about { grid-template-columns: 1fr; gap: 35px; }
+  .about .photo { min-height: 340px; }
+  .quote-grid { grid-template-columns: 1fr; gap: 10px; }
+  footer { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="top-note">Yuba-Sutter & surrounding areas · Booking real-life moments</div>
+
+<header>
+  <a class="logo" href="#home">Flutterby<span>Teah</span></a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#work">The Work</a>
+    <a href="#about">My Story</a>
+    <a href="#kind-words">Kind Words</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">Lifestyle photography · California</div>
+    <h1>Real life.<br><em>Real feeling.</em></h1>
+    <p class="hero-copy">The messy, the meaningful, the blink-and-you-miss-it kind of moments. I'm here for the connection, not the perfection. Let's make photos that actually feel like you.</p>
+    <div class="actions">
+      <a class="button" href="#contact">Let's make something</a>
+      <a class="button light" href="#work">See the work ↗</a>
+    </div>
+  </div>
+  <div class="photo">
+    <!-- Add your own hero photo as images/hero.jpg -->
+    <div class="photo-note">Your favorite photo goes here.<br>Something real. Something you.</div>
+    <span class="photo-label">Unposed · Always</span>
+  </div>
+</section>
+
+<div class="check"></div>
+
+<section class="intro">
+  <div class="eyebrow">A little less posing. A little more living.</div>
+  <h2>I don't chase perfect.<br><em>I chase what's real.</em></h2>
+  <p>Give me the laughing-too-hard moments, the quiet little glances, the wind messing up your hair, and the stuff you didn't even realize mattered. That's the good stuff. That's what I want you to remember.</p>
+  <a class="button light" href="#about">A little about me</a>
+</section>
+
+<section class="section" id="work">
+  <div class="section-top">
+    <div>
+      <div class="eyebrow">A few stories I've held onto</div>
+      <h2 class="section-heading">The good stuff.</h2>
+    </div>
+    <p>Every person, every season, every story looks a little different. That's the whole point.</p>
+  </div>
+
+  <div class="work-grid">
+    <a class="work-card" href="https://instagram.com/flutterbyteah">
+      <div class="photo">
+        <!-- Add your own photo as images/portraits.jpg -->
+        <div class="photo-note">Your portrait work</div>
+        <span class="photo-label">01 / The portraits</span>
+      </div>
+      <h3>The in-between</h3>
+      <p>Portraits · Seniors · Creatives</p>
+    </a>
+    <a class="work-card" href="https://instagram.com/flutterbyteah">
+      <div class="photo">
+        <!-- Add your own photo as images/couples.jpg -->
+        <div class="photo-note">Your couples or connection work</div>
+        <span class="photo-label">02 / The connection</span>
+      </div>
+      <h3>All the feels</h3>
+      <p>Couples · Besties · Love</p>
+    </a>
+    <a class="work-card" href="https://instagram.com/flutterbyteah">
+      <div class="photo">
+        <!-- Add your own photo as images/lifestyle.jpg -->
+        <div class="photo-note">Your family or lifestyle work</div>
+        <span class="photo-label">03 / The everyday</span>
+      </div>
+      <h3>Life as it is</h3>
+      <p>Families · Maternity · Lifestyle</p>
+    </a>
+  </div>
+  <p style="font-size:11px;margin-top:35px;">More of my work lives over on <a href="https://instagram.com/flutterbyteah">Instagram ↗</a></p>
+</section>
+
+<section class="about" id="about">
+  <div class="photo">
+    <!-- Add a photo of yourself as images/teah.jpg -->
+    <div class="photo-note" style="color:#e8ddc9;">A photo of me, Teah.</div>
+    <span class="photo-label">Behind the camera</span>
+  </div>
+  <div>
+    <div class="eyebrow">The person behind FlutterbyTeah</div>
+    <h2>Hey y'all,<br><em>I'm Teah.</em></h2>
+    <p>I'm a lifestyle photographer drawn to the real stuff. The belly laughs, the messy hair, the little looks that say everything without saying a word.</p>
+    <p>My style leans warm, earthy, a little Western, and a little wild. I want you to feel comfortable enough to be yourself, because the best photos happen when you forget the camera is even there.</p>
+    <p>No stiff posing. No pressure to be perfect. Just you, your people, and whatever this season of life looks like.</p>
+    <div class="values">
+      <div class="value"><b>01 / FEELING</b>Real emotion over forced smiles.</div>
+      <div class="value"><b>02 / MOVEMENT</b>Living over standing still.</div>
+      <div class="value"><b>03 / CONNECTION</b>Your people, your way.</div>
+      <div class="value"><b>04 / YOUR STORY</b>No two sessions alike.</div>
+    </div>
+    <div class="actions">
+      <a class="button" href="#contact">Come hang out</a>
+    </div>
+  </div>
+</section>
+
+<div class="check"></div>
+
+<section class="section testimonials" id="kind-words">
+  <div class="eyebrow">Don't just take my word for it</div>
+  <h2 class="section-heading">Kind words.</h2>
+  <div class="quote-grid">
+    <div class="quote">
+      <div class="quote-mark">“</div>
+      <blockquote>We had an amazing time and felt so comfortable. Including individual pictures of my son was the greatest gift. I can't wait to schedule my next shoot!</blockquote>
+      <cite>Jodeci</cite>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">“</div>
+      <blockquote>Teah made sure I was comfortable and felt absolutely beautiful. She was set on capturing my true smile. She made me feel seen.</blockquote>
+      <cite>Lily</cite>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">“</div>
+      <blockquote>Those photos are so beautiful! The outside photos are stunning, and I'm in love with the black and white photos. You really have a talent!</blockquote>
+      <cite>Iqra</cite>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">Your life isn't a photoshoot. It's your story.</div>
+  <h2>Let's make<br><em>something real.</em></h2>
+  <p>Got a session in mind, a question, or just want to see if we're a good fit? Reach out. Tell me what you're dreaming up, and we'll go from there.</p>
+  <div class="actions" style="justify-content:center;">
+    <a class="button" href="mailto:flutterbyteah@gmail.com?subject=Photography%20Inquiry">Ask about a session</a>
+    <a class="button light" href="https://instagram.com/flutterbyteah">Find me on Instagram</a>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:flutterbyteah@gmail.com">flutterbyteah@gmail.com</a>
+    <a href="tel:+15303155984">(530) 315-5984</a>
+    <a href="https://instagram.com/flutterbyteah">@flutterbyteah</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="logo" href="#home" style="font-size:21px;">Flutterby<span>Teah</span></a>
+  <span>Real connection. Real emotion. Real life.</span>
+  <span>© 2026 FlutterbyTeah</span>
+</footer>
+</body>
+</html>
