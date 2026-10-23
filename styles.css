@@ -971,3 +971,14 @@ footer {
     font-size: 25px;
   }
 }
+
+/* Remove unwanted butterfly decorations */
+body::before,
+body::after,
+.contact::before,
+.contact::after,
+footer::before,
+footer::after {
+  content: none !important;
+  display: none !important;
+}
