@@ -712,3 +712,55 @@ blockquote {
     gap: 16px;
   }
 }
+
+/* DELICATE WHITE OUTLINE BUTTERFLIES */
+
+.flying-butterflies {
+  color: #fffdf6;
+  pointer-events: none;
+}
+
+.flying-butterflies svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flying-butterflies svg:nth-child(1) {
+  top: 13%;
+  left: 48%;
+  width: 38px;
+  height: 38px;
+}
+
+.flying-butterflies svg:nth-child(2) {
+  top: 58%;
+  left: 48%;
+  width: 27px;
+  height: 27px;
+}
+
+.flying-butterflies svg:nth-child(3) {
+  top: 23%;
+  right: 7%;
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 700px) {
+  .flying-butterflies svg:nth-child(1) {
+    top: 45%;
+    left: 7%;
+  }
+
+  .flying-butterflies svg:nth-child(2) {
+    top: 67%;
+    left: 5%;
+  }
+
+  .flying-butterflies svg:nth-child(3) {
+    top: 56%;
+    right: 5%;
+  }
+}
