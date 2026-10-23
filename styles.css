@@ -441,3 +441,146 @@ blockquote {
     opacity: 0.55;
   }
 }
+
+/* FLUTTERBYTEAH — OUTLINED BUTTERFLIES + HERO PHOTO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+  min-height: 620px;
+  padding: 75px 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: none;
+}
+
+.hero-content {
+  max-width: 530px;
+}
+
+.hero-photo-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  justify-self: end;
+}
+
+.main-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    linear-gradient(145deg, #514735, #29271f);
+  border: 1px solid #a89b80;
+  color: #eee6d8;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.photo-caption {
+  margin: 12px 0 0;
+  color: #c5b18e;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-style: italic;
+  text-align: right;
+}
+
+.flying-butterflies {
+  position: absolute;
+  inset: 0;
+  color: #fffdf6;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.flying-butterflies svg {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  overflow: visible;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px #211f19);
+  animation: butterfly-drift 5s ease-in-out infinite;
+}
+
+.flying-butterflies svg:nth-child(1) {
+  top: 13%;
+  left: 48%;
+  width: 38px;
+  transform: rotate(-18deg);
+}
+
+.flying-butterflies svg:nth-child(2) {
+  top: 58%;
+  left: 48%;
+  width: 27px;
+  animation-delay: -2s;
+}
+
+.flying-butterflies svg:nth-child(3) {
+  top: 23%;
+  right: 7%;
+  width: 32px;
+  animation-delay: -3.5s;
+}
+
+@keyframes butterfly-drift {
+  0%, 100% {
+    translate: 0 0;
+    rotate: -8deg;
+  }
+  50% {
+    translate: 8px -13px;
+    rotate: 9deg;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 7%;
+  }
+
+  .hero-photo-frame {
+    max-width: 360px;
+    width: 90%;
+    justify-self: center;
+  }
+
+  .main-photo-placeholder {
+    aspect-ratio: 4 / 5;
+  }
+
+  .flying-butterflies svg:nth-child(1) {
+    top: 45%;
+    left: 7%;
+  }
+
+  .flying-butterflies svg:nth-child(2) {
+    top: 67%;
+    left: 5%;
+  }
+
+  .flying-butterflies svg:nth-child(3) {
+    top: 56%;
+    right: 5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flying-butterflies svg {
+    animation: none;
+  }
+}
