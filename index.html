@@ -142,56 +142,85 @@
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <p class="eyebrow">LET'S MAKE SOMETHING MEANINGFUL</p>
-      <h2>Let's talk about your session.</h2>
-      <p>
-        Have an idea, a question, or ready to book?
-        Reach out and tell me what you're thinking.
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="eyebrow">LET'S MAKE SOMETHING REAL</p>
+    <h2>Tell me what you're dreaming up.</h2>
+    <p class="contact-intro">
+      Families, couples, seniors, creatives — whatever your season
+      of life looks like, tell me a little about it.
+    </p>
+
+    <form class="inquiry-form"
+      action="https://formsubmit.co/flutterbyteah@gmail.com"
+      method="POST">
+
+      <input type="hidden" name="_subject"
+        value="New FlutterbyTeah Photography Inquiry">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-grid">
+        <label>
+          Your name *
+          <input type="text" name="Name" placeholder="What should I call you?"
+            required>
+        </label>
+
+        <label>
+          Your email *
+          <input type="email" name="Email" placeholder="Where can I reach you?"
+            required>
+        </label>
+
+        <label>
+          What are you interested in? *
+          <select name="Session type" required>
+            <option value="">Choose a session</option>
+            <option>Family</option>
+            <option>Couples</option>
+            <option>Maternity</option>
+            <option>Newborn / Lifestyle</option>
+            <option>Seniors</option>
+            <option>Branding / Headshots</option>
+            <option>Creative session</option>
+            <option>Mini session</option>
+            <option>Something else</option>
+          </select>
+        </label>
+
+        <label>
+          Preferred date
+          <input type="date" name="Preferred date">
+        </label>
+      </div>
+
+      <label>
+        Tell me a little more *
+        <textarea name="Message" rows="5"
+          placeholder="Who the session is for, the vibe you're wanting, questions, or anything else..."
+          required></textarea>
+      </label>
+
+      <button class="button form-submit" type="submit">
+        SEND YOUR INQUIRY
+      </button>
+
+      <p class="form-note">
+        Filling this out doesn't lock in your date — I'll get back to you
+        to talk details.
       </p>
+    </form>
 
-      <div class="contact-options">
-        <a class="button" href="tel:+15303155984">
-          CALL OR TEXT
-        </a>
+    <div class="contact-details">
+      <a href="tel:+15303155984">530-315-5984</a>
+      <a href="mailto:flutterbyteah@gmail.com">flutterbyteah@gmail.com</a>
+      <a href="https://instagram.com/flutterbyteah"
+        target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+</section>
 
-        <a class="button"
-           href="mailto:flutterbyteah@gmail.com?subject=FlutterbyTeah%20Photography%20Inquiry">
-          EMAIL ME
-        </a>
-
-        <a class="button"
-           href="https://instagram.com/flutterbyteah"
-           target="_blank"
-           rel="noopener noreferrer">
-          INSTAGRAM
-        </a>
-      </div>
-
-      <div class="contact-details">
-        <p>
-          <strong>Phone / Text</strong><br>
-          <a href="tel:+15303155984">530-315-5984</a>
-        </p>
-
-        <p>
-          <strong>Email</strong><br>
-          <a href="mailto:flutterbyteah@gmail.com">
-            flutterbyteah@gmail.com
-          </a>
-        </p>
-
-        <p>
-          <strong>Instagram</strong><br>
-          <a href="https://instagram.com/flutterbyteah"
-             target="_blank"
-             rel="noopener noreferrer">
-            @flutterbyteah
-          </a>
-        </p>
-      </div>
-    </section>
-  </main>
 
   <footer class="site-footer">
     <a class="logo" href="./index.html">FlutterbyTeah</a>
