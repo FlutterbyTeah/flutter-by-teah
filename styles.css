@@ -1077,3 +1077,93 @@ footer::after {
     right: 4%;
   }
 }
+
+/* OLIVE + GOLD WESTERN CHECKERBOARD */
+.checker-strip {
+  background-color: #c5b75b !important;
+  background-image:
+    linear-gradient(45deg, #626b45 25%, transparent 25%),
+    linear-gradient(-45deg, #626b45 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #626b45 75%),
+    linear-gradient(-45deg, transparent 75%, #626b45 75%) !important;
+  background-size: 18px 18px !important;
+  background-position: 0 0, 0 9px, 9px -9px, -9px 0 !important;
+  height: 12px !important;
+  border: none !important;
+}
+
+/* SOFT WHITE BUTTERFLY DETAILS */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "𓆸  ♧  𓆸";
+  position: absolute;
+  top: 12%;
+  right: 5%;
+  color: #eee5d5;
+  opacity: .5;
+  font-size: 24px;
+  letter-spacing: 12px;
+  pointer-events: none;
+}
+
+/* FALLING LEAF ACCENTS */
+.about,
+.portfolio,
+.testimonials,
+.contact {
+  position: relative;
+}
+
+.about::after {
+  content: "❧";
+  position: absolute;
+  top: 35px;
+  right: 7%;
+  color: #a6a06b;
+  font-size: 42px;
+  opacity: .55;
+  pointer-events: none;
+}
+
+.portfolio::after {
+  content: "❧";
+  position: absolute;
+  top: 25px;
+  left: 5%;
+  color: #a6a06b;
+  font-size: 32px;
+  opacity: .45;
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+.testimonials::after {
+  content: "❧";
+  position: absolute;
+  bottom: 25px;
+  right: 6%;
+  color: #a6a06b;
+  font-size: 36px;
+  opacity: .5;
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+/* KEEP DECORATIONS SUBTLE ON PHONES */
+@media (max-width: 600px) {
+  .hero::before {
+    font-size: 18px;
+    right: 3%;
+  }
+
+  .about::after,
+  .portfolio::after,
+  .testimonials::after {
+    font-size: 26px;
+    opacity: .35;
+  }
+}
